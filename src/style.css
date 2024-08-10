@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 body {
@@ -47,4 +48,37 @@ body {
     border: none 0;
     padding: calc(0.7vh + 0.5em) calc(1.6vw + 1.4em);
     width: initial !important;
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    z-index: 3;
+    padding-bottom: 1.3vh;
+    background-color: #102542;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer img {
+    width: 3rem;
+    height: 3rem;
+    transition: all .5s;
+}
+
+footer a:hover {
+    padding-bottom: 1.5vh;
+}
+
+footer img:hover {
+    background-color: #1c4074;
+    border-radius: 12px;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin: 1rem !important;
+    scale: 1/1;
 }
