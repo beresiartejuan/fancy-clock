@@ -49,11 +49,11 @@ npm run build && npm run start
 │   ├── timer.ts        # Lógica del cronómetro
 │   ├── utils.ts        # Funciones de utilidad para formatear la hora
 │   ├── main.ts         # Punto de entrada y coordinación
+│   ├── style.css       # Estilos personalizados
 ├── public/
 │   ├── clock.svg       # Icono del reloj
 │   ├── github.svg      # Icono de GitHub para el footer
-├── index.html          # Estructura HTML de la aplicación
-└── style.css           # Estilos personalizados
+└── index.html          # Estructura HTML de la aplicación 
 ```
 
 ## 🤝 Contribuciones
