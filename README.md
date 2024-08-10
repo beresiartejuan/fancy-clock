@@ -62,4 +62,4 @@ npm run build && npm run start
 
 ### 📜 Licencia
 
-Este proyecto está licenciado bajo la [MIT License](LINCENSE). Puedes hacer lo que quieras con el código, siempre que incluyas la licencia original.
+Este proyecto está licenciado bajo la [MIT License](/LINCENSE). Puedes hacer lo que quieras con el código, siempre que incluyas la licencia original.
