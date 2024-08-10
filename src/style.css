@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #102542;
+    padding: 1vh 5vw;
+}
+
+#app {
+    margin: 0 auto;
+    margin-top: 14vw;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5vh;
+    flex-wrap: wrap;
+}
+
+#timer {
+    color: #FDFDFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: calc(4rem + 1em);
+}
+
+#clock {
+    color: #777779da;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: calc(1.2rem + 1em);
+    margin-bottom: 2vh;
+}
+
+.button.green {
+    background-color: #739e37;
+}
+
+.button.red {
+    background-color: #EA2B1F;
+}
+
+.main.button {
+    cursor: pointer;
+    border-radius: 8px;
+    color: #FDFDFF;
+    border: none 0;
+    padding: calc(0.7vh + 0.5em) calc(1.6vw + 1.4em);
+    width: initial !important;
+}

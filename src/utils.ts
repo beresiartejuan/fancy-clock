@@ -1,0 +1,1 @@
+export const format = (unit: number): string => (unit < 10 ? `0${unit}` : `${unit}`);
