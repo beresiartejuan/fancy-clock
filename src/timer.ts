@@ -43,10 +43,9 @@ export const setUpTimer = (timer: HTMLSpanElement, controllers: TimerControllers
 
     controllers.stop.addEventListener("click", () => {
         if (!isStarted) {
-            seconds = 0;
-            minutes = 0;
-            hours = 0;
+            seconds = minutes = hours = 0;
             changeClock();
+            controllers.stop.innerText = "Stop";
         }
 
         if (isStarted && intervalId) {
@@ -55,5 +54,13 @@ export const setUpTimer = (timer: HTMLSpanElement, controllers: TimerControllers
             controllers.stop.innerText = "Resume";
         }
     });
+
+    window.addEventListener("beforeunload", () => {
+        if (intervalId) {
+            clearInterval(intervalId);
+            isStarted = false;
+            seconds = minutes = hours = 0;
+        }
+    })
 
 }

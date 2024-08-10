@@ -1,13 +1,23 @@
 import { format } from "./utils";
 
 export const setUpClock = (clock: HTMLSpanElement) => {
-    const time = new Date();
 
-    const timeFormated = `${format(time.getHours())}:${format(time.getMinutes())}:${format(time.getSeconds())}`;
-    const dateFormated = `${time.getDate()}/${time.getMonth()}/${time.getFullYear()}`;
+    let intervalId: number | null = null;
 
-    clock.innerText = `${timeFormated} | ${dateFormated}`;
+    const updateClock = () => {
 
-    window.requestAnimationFrame(() => setUpClock(clock));
+        const time = new Date();
 
+        const timeFormated = `${format(time.getHours())}:${format(time.getMinutes())}:${format(time.getSeconds())}`;
+        const dateFormated = `${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}`;
+
+        clock.innerText = `${timeFormated} | ${dateFormated}`;
+
+    }
+
+    updateClock();
+
+    intervalId = window.setInterval(updateClock, 500);
+
+    return () => { clearInterval(intervalId) }
 };
